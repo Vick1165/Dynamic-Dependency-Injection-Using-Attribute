@@ -5,19 +5,19 @@ Dynamically register Dependecy using Custom Attribute
 Usage 
 
 
-````
+```C#
     public interface IUserRepository
     {
         Task<int> InsertUser(string email);
     }
-````
+```
 
     
     
 
     
 
-````
+```C#
     [Export(typeof(IUserRepository),Lifetime.Scoped)]
     public class UserRepository : IUserRepository
     {
@@ -26,5 +26,5 @@ Usage
             return 0;
         }
     }
-````    
+```    
 
