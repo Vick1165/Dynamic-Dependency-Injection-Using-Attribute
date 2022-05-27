@@ -54,3 +54,4 @@ Register as Singleton Service
     }
 ```   
 
+If Lifetime is not mentioned it register service as Transient by default
