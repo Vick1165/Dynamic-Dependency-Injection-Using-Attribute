@@ -15,7 +15,7 @@ Usage
     
     
 
-    
+Register as Scoped Service    
 
 ```C#
     [Export(typeof(IUserRepository),Lifetime.Scoped)]
@@ -27,4 +27,30 @@ Usage
         }
     }
 ```    
+
+Register as Transient Service    
+
+```C#
+    [Export(typeof(IUserRepository),Lifetime.Transient)]
+    public class UserRepository : IUserRepository
+    {
+        public Task<int> InsertUser(string email)
+        {
+            return 0;
+        }
+    }
+```   
+
+Register as Singleton Service    
+
+```C#
+    [Export(typeof(IUserRepository),Lifetime.Singleton)]
+    public class UserRepository : IUserRepository
+    {
+        public Task<int> InsertUser(string email)
+        {
+            return 0;
+        }
+    }
+```   
 
